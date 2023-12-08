@@ -9,8 +9,11 @@ https://style.potepan.com/articles/18387.html
 アクセス権の確認
 
 ```php
-**SELECT user, host, db FROM mysql.db;**
+SELECT user, host, db FROM mysql.db;
+```
 
+結果
+```
 +---------------+-----------+--------------------+
 | user          | host      | db                 |
 +---------------+-----------+--------------------+
