@@ -18,3 +18,5 @@ SELECT 0 AS 'user_id', name, introduction FROM users WHERE id = 1 OR id = 2;
 | --- | --- | --- |
 | 0 | 松本人志 | お笑い芸人 |
 | 0 | 新垣結衣 | 女優 |
+
+```select```に```0```や```null```を設定することで、```as```で指定した(自作？)カラムの値を指定することができる。
