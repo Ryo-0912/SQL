@@ -21,7 +21,7 @@ user_matching um
 
 user_block ub
 
-| id | user_id | to_user_id |
+| id | user_id | to_user_id | type |
 | - | - | - | - |
 | 1 | 1 | 2 | 2 |
 | 2 | 1 | 4 | 2 |
@@ -50,13 +50,14 @@ LEFT JOIN
     (ub.user_id = um.user_id AND ub.target_user_id = 1 AND ub.type = 1) OR
     (ub.target_user_id = um.to_user_id AND ub.user_id = 1 AND ub.type IN (1, 2))
 WHERE
-    (um.user_id = 1 AND user.user_status IN (1, 2)) OR
-    (um.to_user_id = 1 AND user.user_status IN (1, 2));
+    um.user_id = 1
+    OR
+    um.to_user_id = 1;
 ```
 
 このSQLを実行すると、以下のような結合テーブルが取得できる。
 
-| id | user_id | to_user_id |
+| id | user_id | to_user_id | id | user_id | target_user_id | type |
 | - | - | - | - | - | - | - |
 | 1 | 1 | 2 | 1 | 1 | 2 | 2 |
 | 2 | 1 | 3 | NULL | NULL | NULL | NULL |
