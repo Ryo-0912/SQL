@@ -9,7 +9,7 @@ userテーブル u
 | 5 | 諸橋 | 1 |
 
 
-user_matching um
+user_matchingテーブル um
 
 | id | user_id | to_user_id |
 | - | - | - | 
@@ -19,7 +19,7 @@ user_matching um
 | 4 | 2 | 5 |
 | 5 | 3 | 4 |
 
-user_block ub
+user_blockテーブル ub
 
 | id | user_id | to_user_id | type (1 : 非表示 2 : ブロック) |
 | - | - | - | - |
