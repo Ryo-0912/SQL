@@ -21,7 +21,7 @@ user_matching um
 
 user_block ub
 
-| id | user_id | to_user_id | type(1 : 非表示 2 : ブロック) |
+| id | user_id | to_user_id | type (1 : 非表示 2 : ブロック) |
 | - | - | - | - |
 | 1 | 1 | 2 | 2 |
 | 2 | 1 | 4 | 2 |
