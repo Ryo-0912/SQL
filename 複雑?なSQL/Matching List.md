@@ -1,6 +1,6 @@
 userテーブル u 
 
-| id | name | sex |
+| id | name | sex (1 : 男, 2 : 女) |
 | - | - | - | 
 | 1 | 高麗 | １ |
 | 2 | 藤田 | 1 |
@@ -21,7 +21,7 @@ user_matchingテーブル um
 
 user_blockテーブル ub
 
-| id | user_id | to_user_id | type (1 : 非表示 2 : ブロック) |
+| id | user_id | to_user_id | type (1 : 非表示, 2 : ブロック) |
 | - | - | - | - |
 | 1 | 1 | 2 | 2 |
 | 2 | 1 | 4 | 2 |
