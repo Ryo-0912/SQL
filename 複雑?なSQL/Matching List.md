@@ -48,11 +48,7 @@ LEFT JOIN
     (ub.target_user_id = um.user_id AND ub.user_id = 1 AND ub.type IN (1, 2)) OR
     (ub.user_id = um.to_user_id AND ub.target_user_id = 1 AND ub.type = 1) OR
     (ub.user_id = um.user_id AND ub.target_user_id = 1 AND ub.type = 1) OR
-    (ub.target_user_id = um.to_user_id AND ub.user_id = 1 AND ub.type IN (1, 2))
-WHERE
-    um.user_id = 1
-    OR
-    um.to_user_id = 1;
+    (ub.target_user_id = um.to_user_id AND ub.user_id = 1 AND ub.type IN (1, 2));
 ```
 
 このSQLを実行すると、以下のような結合テーブルが取得できる。
